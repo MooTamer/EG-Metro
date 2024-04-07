@@ -6,20 +6,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
+
+</head>
+<body>
+
+<div class="parallax"></div>
+
+
+<script>
+function checkLogin() {
+  // Check if the user is logged in
+  if (sessionToken.length!=-1) {
+    // Redirect the user to the login page
+    window.location.href = "/LoginPage";
+  } else {
+    // Display a message
+    alert("You must be logged in to access subscriptions.");
+  }
+}
+</script>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    
+  <nav>
+    <ul class="nav-links">
+      <li><a href="">Home</a></li>
+      <li><a href="AboutUs">About Us</a></li> 
+      <li class="dropdown">
+      <li><a href="login">Login</a></li>
+
+    </ul>
+  </nav>
+  <style>
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url('images/Wallpaper5.jpg');
+ 
   min-height: 100%;
   background-position: center;
   background-size: cover;
+  
 }
 .w3-display-middle {
-  
-  background-size: cover;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  background-image: url('images/Wallpaper5.jpg');
   background-position: center;
-   backdrop-filter: blur(2px);
+  background-size: cover;
+  backdrop-filter: blur(8px);
 }
 .logo {
     width: 100px;
@@ -39,7 +79,10 @@ body, html {height: 100%}
     color: #fff;
     padding: 20px;
     line-height: 1.5;
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: #fff;
+    
+    
   }
   
   .nav-links {
@@ -77,73 +120,8 @@ body, html {height: 100%}
     color: #fff;
     cursor: pointer;
   }
-   .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.8);
-    min-width: 200px;
-  }
-  @media screen and (max-width: 768px) {
-  .dropdown-content {
-    min-width: 100%; /* set width to 100% */
-    left: 0; /* align menu to the left */
-    box-shadow: none; /* remove box shadow */
-  }
-}
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropbtn {
-    color: white;
-    text-decoration: none;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  .dropdown-content a:hover {
-    background-color: #b3b3b3;
-  }
  
 </style>
-</head>
-<body>
-
-<div class="parallax"></div>
-
-
-<script>
-function checkLogin() {
-  // Check if the user is logged in
-  if (sessionToken.length!=-1) {
-    // Redirect the user to the login page
-    window.location.href = "/LoginPage";
-  } else {
-    // Display a message
-    alert("You must be logged in to access subscriptions.");
-  }
-}
-</script>
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    
-  <nav>
-    <ul class="nav-links">
-      <li><a href="">Home</a></li>
-      <li><a href="AboutUs">About Us</a></li> 
-      <li class="dropdown">
-      <li><a href="login">Login</a></li>
-
-    </ul>
-  </nav>
-  
   </div>
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">Metro Station</h1>
